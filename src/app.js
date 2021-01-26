@@ -1,3 +1,7 @@
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+})
 
 function toggleMenu() {
     const resMenu = document.querySelector('.menuToggle');
@@ -16,7 +20,6 @@ if (animItems.length > 0) {
         for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
-
             const animItemOffset = offset(animItem).top;
             const animStart = 4;
 
